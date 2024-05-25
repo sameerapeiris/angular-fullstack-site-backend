@@ -1,9 +1,9 @@
-import { fakeListing } from "./fake-data"
+import { fakeListings } from "./fake-data"
 
 export const getAllListingsRoute ={
     method: 'GET',
     path: '/api/listings',
     handler: (req, h) =>{
-        return fakeListing;
+        return fakeListings;
     }
 }

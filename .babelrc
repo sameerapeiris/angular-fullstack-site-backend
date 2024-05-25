@@ -1,0 +1,12 @@
+//this basically where we tell babel how we want it to transform modern javascript code that we write into javascript that Nodejs can excecute
+{
+   "presets": [
+       "@babel/preset-env"
+   ],
+   "plugins": [
+       [
+           "@babel/plugin-transform-runtime",
+           { "regenerator": true }
+       ]
+   ]
+}

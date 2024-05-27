@@ -1,12 +1,12 @@
 import { db } from "../database"
 
-export const getAllListingsRoute ={
+export const getAllListingsRoute = {
     method: 'GET',
     path: '/api/listings',
     handler: async (req, h) => {
-        const { reuslts } = await db.query(
+        const { results } = await db.query(
             'SELECT * FROM listings'
         );
-        return reuslts
+        return results;
     }
 }

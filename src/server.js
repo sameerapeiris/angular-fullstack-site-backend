@@ -5,7 +5,7 @@ import routes from './routes';
 import { db } from './database';
 let server;
 
-const start = async () => {
+const init = async () => {
     server = Hapi.server({
         port: 8000,
         host: 'localhost',
@@ -31,4 +31,4 @@ process.on('SIGINT', async () => {
     process.exit(0);
 });
 
-start();
+init();

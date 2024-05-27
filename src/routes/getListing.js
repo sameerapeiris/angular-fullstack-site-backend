@@ -1,9 +1,9 @@
 import { Boom, boomify, isBoom } from "@hapi/boom";
 import {  fakeListings } from "./fake-data";
+import { db } from '../database';
 
 
-
-export const getListingRoute ={
+export const getListingRoute = {
     method: 'GET',
     path: '/api/listings/{id}',
     handler: async (req, h) => {

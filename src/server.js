@@ -10,6 +10,16 @@ const start = async () => {
     server = Hapi.server({
         port: 8000,
         host: 'localhost',
+        routes: {
+            cors: {
+              origin: ['http://localhost:4200'], // or specific origins ['http://localhost:4200']
+              headers: ['Accept', 'Content-Type'],
+              exposedHeaders: ['WWW-Authenticate', 'Server-Authorization'],
+              additionalExposedHeaders: ['X-Total-Count'],
+              maxAge: 60,
+              credentials: true
+            }
+          }
     });
 
     routes.forEach(route => server.route(route));
